@@ -14,7 +14,6 @@ function formatSoc(value) {
 
 export default function App() {
   const [soc, setSoc] = useState("");
-  const [valid, setValid] = useState(false);
   const [note, setNote] = useState("");
 
   const handleInput = (e) => {
@@ -25,12 +24,12 @@ export default function App() {
   const handleSubmit = (e) => {
     e.preventDefault();
     if (soc.length < 11) {
-      setValid(false);
       setNote(`A Valid Social Security Number contains 9 numbers.`);
+      setSoc("");
     }
     if (soc.length === 11) {
-      setValid(true);
       setNote(`Social Security Number XXX-XX-${soc.slice(7, 11)} is valid`);
+      setSoc("");
     }
   };
 
