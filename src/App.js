@@ -44,7 +44,7 @@ export default function App() {
       setNote(`A valid Social Security Number contains 9 numbers.`);
       setSoc("");
     } else if (soc.length === 11) {
-      setNote(`Social Security Number XXX-XX-${soc.slice(7, 11)} is valid`);
+      setNote(`Social Security Number XXX-XX-${soc.slice(7)} is valid`);
       setSoc("");
     }
   };
