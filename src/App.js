@@ -22,13 +22,13 @@ export default function App() {
   };
   const handleSubmit = (e) => {
     e.preventDefault();
-    if (soc.slice(0, 1) == 9) {
+    if (soc.slice(0, 1) === "9") {
       setNote(`A valid Social Security Number cannot begin with 9`);
       setSoc("");
-    } else if (soc.slice(0, 3) == "000") {
+    } else if (soc.slice(0, 3) === "000") {
       setNote(`A valid Social Security Number cannot begin with 000`);
       setSoc("");
-    } else if (soc.slice(0, 3) == "666") {
+    } else if (soc.slice(0, 3) === "666") {
       setNote(`A valid Social Security Number cannot begin with 666`);
       setSoc("");
     } else if (soc.slice(4, 6) == "00") {
