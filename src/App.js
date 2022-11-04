@@ -31,10 +31,10 @@ export default function App() {
     } else if (soc.slice(0, 3) === "666") {
       setNote(`A valid Social Security Number cannot begin with 666`);
       setSoc("");
-    } else if (soc.slice(4, 6) == "00") {
+    } else if (soc.slice(4, 6) === "00") {
       setNote(`A valid Social Security Number cannot contain XXX-00-XXXX`);
       setSoc("");
-    } else if (soc.slice(7) == "0000") {
+    } else if (soc.slice(7) === "0000") {
       setNote(`A valid Social Security Number cannot end in 0000`);
       setSoc("");
     } else if (soc.length < 11) {
