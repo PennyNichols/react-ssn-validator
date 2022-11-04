@@ -15,12 +15,16 @@ function formatSoc(value) {
 export default function App() {
   const [soc, setSoc] = useState("");
   const [note, setNote] = useState("");
+  const [valid, setValid] = useState(true);
 
   const handleInput = (e) => {
     const formattedSoc = formatSoc(e.target.value);
     setSoc(formattedSoc);
+    if (soc[1] === 9) {
+      setValid(false);
+    }
   };
-
+  console.log(soc);
   const handleSubmit = (e) => {
     e.preventDefault();
     if (soc.length < 11) {
